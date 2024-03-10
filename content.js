@@ -47,7 +47,7 @@ const decideInsertedVal = (ele) => {
   }
   return null;
 };
-
+// Function to get CHAT GPT RESPONSE
 const fetchToOpenAI = async (q, maxRetries = 5) => {
   let retryCount = 0;
   let hasError = true;
