@@ -1,5 +1,5 @@
 {
-  "manifest_version": 3,
+  "manifest_version": 3.01,
   "name": "Linked Job Auto Apply",
   "version": "1.0",
   "description": "Extension for applying job in Linkedin",
