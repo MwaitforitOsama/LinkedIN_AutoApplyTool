@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Linked Job Auto Apply",
+  "version": "1.0",
+  "description": "Extension for applying job in Linkedin",
+  "host_permissions": ["https://www.linkedin.com/", "http://api.geonames.org/"],
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "activeTab",
+    "tabs",
+    "storage",
+    "scripting",
+    "downloads",
+    "fileBrowserHandler"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_end",
+      "matches": ["https://www.linkedin.com/jobs/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
